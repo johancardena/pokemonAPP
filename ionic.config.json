@@ -1,0 +1,7 @@
+{
+  "name": "pokeapp-johan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
