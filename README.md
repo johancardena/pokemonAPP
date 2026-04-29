@@ -32,6 +32,9 @@ git clone URL_DEL_REPOSITORIO
 npm install
 
 3. Ejecutar el proyecto:
+
+<img width="610" height="1356" alt="image" src="https://github.com/user-attachments/assets/181f4443-bf99-4a25-99ba-25275b4c28cc" />
+
 Pantalla principal
 
 <img width="1220" height="2712" alt="image" src="https://github.com/user-attachments/assets/fd9aad5b-2dfa-4965-89e4-036e127b7e65" />
