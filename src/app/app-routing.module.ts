@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pokemon-list',
     pathMatch: 'full'
+  },
+  {
+    path: 'pokemon-list',
+    loadChildren: () => import('./pages/pokemon-list/pokemon-list.module').then( m => m.PokemonListPageModule)
   },
 ];
 

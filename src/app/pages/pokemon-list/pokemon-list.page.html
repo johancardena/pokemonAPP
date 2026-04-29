@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Buscador Pokémon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-input
+      label="Nombre del Pokémon"
+      label-placement="floating"
+      [(ngModel)]="nombrePokemon">
+    </ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="buscarPokemon()" class="ion-margin-top">
+    Buscar
+  </ion-button>
+
+  <ion-text color="danger" *ngIf="error">
+    <p>{{ error }}</p>
+  </ion-text>
+
+  <ion-card *ngIf="pokemon">
+    <img [src]="pokemon.sprites.front_default" />
+
+    <ion-card-header>
+      <ion-card-title>{{ pokemon.name | uppercase }}</ion-card-title>
+      <ion-card-subtitle>ID: {{ pokemon.id }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>Altura:</strong> {{ pokemon.height }}</p>
+      <p><strong>Peso:</strong> {{ pokemon.weight }}</p>
+
+      <p><strong>Tipos:</strong></p>
+      <ion-chip *ngFor="let tipo of pokemon.types">
+        {{ tipo.type.name }}
+      </ion-chip>
+
+      <p><strong>Habilidades:</strong></p>
+      <ion-chip *ngFor="let habilidad of pokemon.abilities">
+        {{ habilidad.ability.name }}
+      </ion-chip>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
